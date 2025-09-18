@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment and Media Tags</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <h2><b>Coder Army</b>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./index.html">Home</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./notes.html">Notes</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./blogs.html">Blogs</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./aboutme.html">Contact Me</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <hr />
+      </nav>
+    </header>
+    <main>
+        <big>
+            <h2>
+                Media Tags - Audio, Video, Embed, Iframe
+            </h2>
+                    <button>
+    <a href="./lecture5.html">Previous</a>
+</button>
+<button>
+    <a href="./index.html">Home</a>
+</button><br><br>
+            <iframe src="https://www.youtube.com/embed/NGYp1zCBthk?si=QR9zca6OK01kOFsb" allowfullscreen frameborder="0" width="50%" height="400px"></iframe>
+            <ol>
+                <li>
+                    <h3>Iframe Tag</h3>
+                    The iframe tag is used to embed another HTML document within the current document. 
+                    <br>It creates a frame inside webpage that can display content from another source, such as a webpage, video, etc.
+                    <br> Important attributes of the iframe tag include:
+                    <ul>
+                        <li>
+                            src: Specifies the URL of the page to embed.
+                        </li>
+                        <li>
+                            width and height: Define the dimensions of the iframe.
+                        </li>
+                        <li>
+                            frameborder: Controls the border around the iframe (0 for no border, 1 for border).
+                        </li>
+                        <li>
+                            allowfullscreen: Allows the iframe content to be displayed in fullscreen mode.
+                        </li>
+                    </ul>
+                    <br>
+                    Example:
+                    <pre>&lt;iframe src="https://www.youtube.com/embed/NGYp1zCBthk?si=QR9zca6OK01kOFsb" width="50%" height="400" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+                    </pre>
+                    Output is shown as the above Youtube Video.
+                </li>
+                <li>
+                    <h3>Audio Tag</h3>
+                    The audio tag is used to embed sound content in a web page. It supports various audio formats like MP3, WAV, and OGG.
+                    <br> We can control playback with attributes:
+                    <ul>
+                        <li>
+                            controls: Displays audio controls (play, pause, volume).
+                        </li>
+                        <li>
+                            autoplay: Starts playing the audio as soon as it is ready.
+                        </li>
+                        <li>
+                            loop: Repeats the audio indefinitely.
+                        </li>
+                        <li>
+                            muted: Mutes the audio by default.
+                        </li>
+                        
+                    </ul>
+                    <br>
+                    Example:
+                    <br>
+                    <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element. => This runs when browser does not support the audio tag or above audio source formats.
+&lt;/audio&gt;
+                    </pre>
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li>
+                    <h3>Video Tag</h3>
+                    The video tag is used to embed video content in a web page. It supports various video formats like MP4, WebM, and OGG.
+                    <br> We can control playback with attributes:
+                    <ul>
+                        <li>
+                            controls: Displays video controls (play, pause, volume).
+                        </li>
+                        <li>
+                            autoplay: Starts playing the video as soon as it is ready.
+                        </li>
+                        <li>
+                            loop: Repeats the video indefinitely.
+                        </li>
+                        <li>
+                            muted: Mutes the video by default.
+                        </li>
+                        <li>
+                            width and height: Sets the dimensions of the video player.
+                        </li>
+                    </ul>
+                    <br>
+                    Example:
+                    <pre>
+&lt;video width="420" controls loop&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video element. => This runs when browser does not support the video tag or above video source formats.
+&lt;/video&gt;
+                    </pre>
+                    <p>Output: </p>
+                    <video width="420" controls loop>
+                        <source src="./video.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </li>
+            </ol>
+            <hr>
+            <h2>
+                Deployment of Multi Page Website
+            </h2>
+            Deployment is the process of making your website live and accessible on the internet. Here are the general steps to deploy a multi-page website:
+            You can use platforms like GitHub Pages, Netlify, Vercel, or traditional web hosting services.
+            <ol>
+                <li>
+                    <b>Choose a Hosting Platform:</b> Select a hosting service that suits your needs. For beginners, GitHub Pages or Netlify are great options as they offer free hosting for static websites.
+                </li>
+                <li>
+                    <b>Prepare Your Files:</b> Ensure all your HTML, CSS, JavaScript, images, and other assets are organized in a single directory. Make sure all links between pages are relative paths.
+                </li>
+                <li>
+                    <b>Drag and Drop</b> your project folder in Netlify or Vercel dashboard or push your code to GitHub repository if using GitHub Pages.
+                </li>
+                <li>
+                    <b>Configure Domain (Optional):</b> If you have a custom domain, you can configure it to point to your hosting platform or you can use the free subdomain provided by the hosting service.
+                </li>
+                <li>
+                    <b>Test Your Website:</b> After deployment, visit your website URL to ensure everything is working correctly. Check all links, images, and functionality.
+                </li>
+            </ol>
+            <img src="./netlify.png" alt="netlify deployment" width="800px">
+        </big>
+    </main>
+    <hr>
+        <button>
+    <a href="./lecture5.html">Previous</a>
+</button>
+<button>
+    <a href="./index.html">Home</a>
+</button>
+      </big>
+    </main>
+    <footer>
+            <hr>
+            <!-- <marquee behavior="alternate" direction="up"> -->
+            <p>Made with love💖 by <i><a href="https://x.com/realPrinceAnand" target="_blank">Prince Anand</a></i>. &copy; 2025 <a href="https://youtube.com/@coderarmy9" target="_blank">Coder Army</a>. All rights reserved.</p></marquee>
+        <!-- </marquee> -->
+        </footer>
+</body>
+</html>

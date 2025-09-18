@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lecture 2</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <h2><b>Coder Army</b>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./index.html">Home</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./notes.html">Notes</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./blogs.html">Blogs</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./aboutme.html">Contact Me</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <hr />
+      </nav>
+    </header>
+    <main>
+    <big>
+    <h1>
+        HTML : Hyper Text Markup Language
+    </h1>
+    <button>
+    <a href="./lecture1.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture3.html">Next</a>
+</button>
+    <p>
+        HyperText Markup Language(HTML) is the standard language used to create and structure the content of a webpage.
+    </p>
+    <ul>
+        <li>
+            HyperText: It refers to the ability to create links (hyperlinks) that connect different web pages and resources on the internet. <br>
+            <br>
+        </li>
+        <li>
+            Markup Language: HTML is a markup language, which means here we use tags to tell the web browser how to display the content. <br>
+            Tags are enclosed in angle brackets, e.g., <code>&lt;tagname&gt;</code>.
+        </li>
+    </ul>
+    <h2>
+        HTML Tags
+    </h2>
+    <ol>
+        <h3>
+        <li>The Heading (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>)
+        </h3>
+        <p>
+            Headings are tags used to define titles and subtitles on your page. 
+        </p>
+        <ul>
+            <li><code>&lt;h1&gt;</code>: The most important heading, typically used only once per page for the main title.</li>
+            <li><code>&lt;h2&gt;</code>: A major section heading.</li>
+            <li><code>&lt;h3&gt;</code>: A sub-section heading under an <code>&lt;h2&gt;</code>.</li>
+            <li>...and so on, down to <code>&lt;h6&gt;</code>, the least important heading.</li>
+        </ul>
+        </li>
+        <h3>
+        <li>The Paragraph Tag (<code>&lt;p&gt;</code>)
+        </h3>
+        <p>
+            Used for Grouping sentences and blocks of text together and tell browser that this is a paragraph. 
+        </p>
+        <p> Browsers automatically add a little bit of space before and after a <code>&lt;p&gt;</code> element, separating it from other content</p>
+        Example:
+            <code>&lt;p&gt;This is a paragraph. It contains several sentences about a topic.&lt;/p&gt;</code>
+        
+        </li>
+        <h3>
+        <li>Horizontal Rules (<code>&lt;hr&gt;</code>)
+        </h3>
+        <p>
+            The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+        </p>
+        <p>They are self closing tag, means they don't need a <code>&lt;/hr&gt;</code> tag.</p>
+        Example: <code>&lt;hr&gt;</code> adds a horizontal line just like below this 👇
+        <hr>
+        
+        <h3>
+        <li>The Line Break Tag: (<code>&lt;br&gt;</code>)
+        </h3>
+        <p>
+            The <code>&lt;br&gt;</code> tag tells browse to hit the enter key and start a new line within a paragraph or block of text.
+        </p>
+        <p>They are also a self closing tag, means they don't need a <code>&lt;/br&gt;</code> tag.</p>
+        Example: 
+           <code>&lt;p&gt;This is the first line.&lt;br&gt;This is the second line.&lt;/p&gt;</code>
+            <p>Output:
+            <p><code>This is the first line.<br>This is the second line.</code></p>
+            </p>
+        </li>
+        
+        <h3>
+        <li>List Elements (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>)
+        </h3>
+        <p>These tags are used to create lists in HTML.</p>
+        <p>ul stands for unordered list (bulleted list), ol stands for ordered list (numbered list), and li stands for list item.</p>
+        Example: 
+        <table border="">
+            <tr>
+                <th>
+                    Structure
+                </th>
+                <th>
+                    Code
+                </th>
+                <th>
+                    Output
+                </th>
+            </tr>
+            <tr>
+                <td>
+<pre>
+Shopping List
+├─ Fruits
+│   ├─ Apple
+│   ├─ Banana
+│   └─ Mango
+├─ Vegetables
+│   ├─ Carrot
+│   └─ Spinach
+├─ Drinks
+├─ Milk
+└─ Juice
+            </pre>
+
+                </td>
+                <td>
+<pre>
+Shopping List
+&lt;ol&gt;
+  &lt;li&gt;Fruits
+    &lt;ul&gt;
+      &lt;li&gt;Apple&lt;/li&gt;
+      &lt;li&gt;Banana&lt;/li&gt;
+      &lt;li&gt;Mango&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables
+    &lt;ul&gt;
+      &lt;li&gt;Carrot&lt;/li&gt;
+      &lt;li&gt;Spinach&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Drinks
+    &lt;ul&gt;
+      &lt;li&gt;Milk&lt;/li&gt;
+      &lt;li&gt;Juice&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+    </pre>
+
+                </td>
+                <td>
+                    Shopping List
+    <ol>
+      <li>Fruits
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Mango</li>
+        </ul>
+      </li>
+      <li>Vegetables
+        <ul>
+          <li>Carrot</li>
+          <li>Spinach</li>
+        </ul>
+      </li>
+      <li>Drinks
+        <ul>
+          <li>Milk</li>
+          <li>Juice</li>
+        </ul>
+      </li>
+    </ol>
+
+                </td>
+            </tr>
+        </table>
+        <h3>
+        <li>
+            The Anchor Tag (<code>&lt;a&gt;</code>)</h3>
+            <p>It is used to create hyperlinks that link one page to another or to a specific section within a page.
+            </p>
+            <h4>Attributes (extra information given inside a tag):</h4>
+            <ul>
+                <li><code>href</code>: Specifies the URL of the page the link goes to.</li>
+                <li><code>target</code>: Specifies where to open the linked document. Common values are <code>_self</code> (default, opens in the same tab) and <code>_blank</code> (opens in a new tab).</li>
+            </ul>
+            <br>
+            Example:
+            <code>&lt;a href="https://www.google.com" target="_blank"&gt;Go to google&lt;/a&gt;</code>
+            <p>
+            Output:  <a href="https://www.google.com" target="_blank">Go to google</a></p>
+        </li>
+        <h3>
+        <li>
+            The Image Tag (<code>&lt;img&gt;</code>)</h3>
+            <p>
+                The Image tag is a self-closing tag used to embed an image onto your page.
+            </p>
+            <h4>Attributes:</h4>
+            <ul>
+                <li><code>src</code>: Specifies the path to the image file.</li>
+                <li><code>alt</code>: Provides alternative text for the image if it cannot be displayed.</li>
+                <li><code>width</code> and <code>height</code>: Define the dimensions of the image in pixels.</li>
+            </ul>
+            <br>
+            Example:
+            <code>&lt;img src="image.jpg" alt="Description of image" width="150"&gt;</code>
+            <p>
+            Output: <br>
+            <img src="./coder1.png" alt="Description of image" width="150">
+        </p>
+        </li>
+    </ol>
+        <hr>
+
+    </ol>
+    </big>
+    </main>
+    <footer>
+        <big>
+    <button>
+    <a href="./lecture1.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture3.html">Next</a>
+</button>
+      </big>
+    </main>
+    <footer>
+            <hr>
+            <!-- <marquee behavior="alternate" direction="up"> -->
+            <p>Made with love💖 by <i><a href="https://x.com/realPrinceAnand" target="_blank">Prince Anand</a></i>. &copy; 2025 <a href="https://youtube.com/@coderarmy9" target="_blank">Coder Army</a>. All rights reserved.</p></marquee>
+        <!-- </marquee> -->
+        </footer>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <h2><b>Coder Army</b>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./index.html">Home</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./notes.html">Notes</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./blogs.html">Blogs</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./aboutme.html">Contact Me</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <hr />
+      </nav>
+      
+    </header>
+    <main>
+    <big>
+    <h2>
+        HTML Forms
+    </h2>
+    <button>
+    <a href="./lecture4.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture6.html">Next</a>
+</button>
+    <p>
+        Till now, user can only view the content on our web pages. But what if we want to interact with users and get some input from them?
+        We need ways to collect user input on our websites. This is where HTML forms come into play. Forms allow users to enter data, which can then be sent to a server for processing.
+    </p>
+    <p>
+        Here, <code>&lt;form&gt;</code> tag comes into play...
+    </p>
+    <p>
+        The <code>&lt;form&gt;</code> element is used to create an HTML form for user input. It can contain various types of input elements, such as text fields, checkboxes, radio buttons, submit buttons, and more.
+    </p>
+    <p>
+        Lets go through some important tags and attribute needed to create forms in html:
+    </p>
+    <ul>
+        <li>
+           <h2> <code>&lt;input&gt;</code> element: </h2>This helps us to make input fields for user to write something. It is a self closing tag. It has various types like text, password, checkbox, radio, submit etc. 
+              <p>Example:</p>
+              Most common type is text:<pre>&lt;input type="text" placeholder="Enter your username"&gt;
+                </pre>
+                This is shown as: <input type="text" name="username" placeholder="Enter your username">
+
+        </li>
+        <li>
+            <h2>
+                <code>&lt;label&gt;</code> element:
+            </h2>
+            <p>This tells the user what the input field is about.</p>
+            <p>Example:</p>
+            <pre>&lt;label&gt;Username:&lt;/label&gt;
+&lt;input type="text" &gt;
+            </pre>
+            This is shown as:
+            <label>Username:</label>
+            <input type="text" >
+            <p>
+            <b>
+                for attribute:
+            </b>
+            In the above example, there is no connection between label and input field. To connect them, we use for attribute in label tag and id attribute in input tag. The value of for attribute should be same as the value of id attribute.
+            </p>
+            <p>Example:</p>
+            <pre>&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username"&gt;     
+            </pre>
+            This is shown as:
+            <label for="username">Username:</label>
+            <input type="text" id="username">   
+
+        </li>
+        <li><h2><code>name</code> attribute:
+        </h2>
+            <p>
+                For now when user types something and browser sends the data to server, server doesn't know which data is for which input field. To solve this problem, we use name attribute in input tag. We cant use ID as ID should be unique for each element. But name can be same for multiple elements like checkboxes.
+            </p>
+            <p>Example:</p>
+            <pre>&lt;label for="firstname"&gt;First Name:&lt;/label&gt;
+&lt;input type="text" id="firstname" name="firstname"&gt;     
+            </pre>
+            This is shown as:
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname">
+        </li>
+        <li>
+            <h2>
+                <code>type</code> attribute:
+            </h2>
+            <p>
+                This attribute specifies the type of input element to display. Some common types are:
+            </p>
+            <ul>
+                <li><b>text</b>: A single-line text input field.</li>
+                <li><b>password</b>: A text field that masks the input (for passwords).</li>
+                <li><b>checkbox</b>: A checkbox that can be checked or unchecked.</li>
+                <li><b>radio</b>: A radio button, used for selecting one option from a group.</li>
+                <li><b>submit</b>: A button that submits the form data to the server.</li>
+                <li><b>email</b>: A text field for entering an email address, with basic validation.</li>
+                <li><b>number</b>: A field for entering numeric values, with up/down arrows for incrementing/decrementing.</li>
+                <li><b>date</b>: A field for selecting a date from a calendar picker.</li>
+                <li><b>file</b>: A field for uploading files.</li>
+            </ul>
+            <p>Example:</p>
+            <pre>&lt;input type="password" placeholder="Enter your password"&gt;</pre>
+            This is shown as: <input type="password" placeholder="Enter your password">
+        </li>
+        <li>
+            <h2>
+                <code>value</code> attribute:
+            </h2>
+            <p>
+              for input types like checkbox, radio, and submit, the value attribute specifies the value that will be sent to the server when the form is submitted.  
+            </p>
+            <p>Example:</p>
+            <pre>&lt;input type="checkbox" name="subscribe" value="yes"&gt;Have you Subscribed to Coder Army yet?😊</pre>
+            This is shown as: <input type="checkbox" name="subscribe" value="yes">Have you Subscribed to Coder Army yet?😊
+            <p>
+                <b>
+                    radio buttons:
+                </b>
+                Radio buttons allow users to select one option from a set of predefined options. To group radio buttons together, they must share the same name attribute.
+
+            </p>
+            <p>Example:</p>
+<pre>
+&lt;form&gt;
+  &lt;input type="radio" name="language" value="html"&gt; HTML &lt;br&gt;
+  &lt;input type="radio" name="language" value="css"&gt; CSS &lt;br&gt;
+  &lt;input type="radio" name="language" value="javascript"&gt; JavaScript &lt;br&gt;
+&lt;/form&gt;
+</pre>
+
+            This is shown as:
+            <form>
+              <input type="radio" name="language" value="html"> HTML <br>
+              <input type="radio" name="language" value="css"> CSS <br>
+              <input type="radio" name="language" value="javascript"> JavaScript <br>
+            </form>
+
+        </li>
+        <li>
+            <h2>
+                <code>&lt;submit&gt;</code> element:
+            </h2>
+            <p>Ab tak hamara data bs fill hua h, agr user submit krna chahta h toh uske liye hame submit button banana padega. </p>
+            <p>Example:</p>
+            <pre>&lt;input type="submit" value="Submit"&gt;</pre>
+            This is shown as: <input type="submit" value="Submit">
+        </li>
+        <li>
+            <h2>
+                <code>&lt;button&gt;</code> element:
+            </h2>
+            <p>
+                This element represents a clickable button. It can contain text or images, and it can be styled using CSS. The button can be used to submit a form, reset a form, or trigger JavaScript functions when clicked.
+            </p>
+            <p>
+                This is better than input type submit as we can add more styling to it.
+            </p>
+            <p>Example:</p>
+            <pre>&lt;button type="submit"&gt;Submit&lt;/button&gt;</pre>
+            This is shown as: <button type="submit">Submit</button>
+        </li>
+        <li>
+            <h2>
+                <code>&lt;textarea&gt;
+                </code> element:
+            </h2>
+            <p>
+                This element is used to create a multi-line text input field. It allows users to enter larger amounts of text, such as comments or messages. The <code>&lt;textarea&gt;</code> element can be resized by the user, and it can also have rows and columns attributes to specify its initial size.
+            </p>
+            <p>Example:</p>
+            <pre>&lt;textarea rows="4" cols="50" placeholder="Enter your message here"&gt;&lt;/textarea&gt;</pre>
+            This is shown as:
+            <textarea rows="4" cols="50" placeholder="Enter your message here"></textarea>
+        </li>
+        <li>
+            <h2>
+                <code>&lt;select&gt;</code> and <code>&lt;option&gt;</code> elements:
+            </h2>
+            <p>
+                These elements are used to create a drop-down list of options. The <code>&lt;select&gt;</code> element contains multiple <code>&lt;option&gt;</code> elements, each representing a different choice. Users can select one option from the list.
+            </p>
+            <p>Example:</p>
+            <pre>
+&lt;select name="courses"&gt;
+    &lt;option value="System Design"&gt;System Design&lt;/option&gt;
+    &lt;option value="DSA"&gt;DSA&lt;/option&gt;
+    &lt;option value="Web Development Defense"&gt;Web Development Defense&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+            This is shown as:
+            <select name="courses">
+                <option value="System Design">System Design</option>
+                <option value="DSA">DSA</option>
+                <option value="Web Development Defense">Web Development Defense</option>
+            </select>
+        </li>
+
+    </ul>
+    
+    </big>
+    </main>
+</footer>
+    <hr>
+<button>
+    <a href="./lecture4.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture6.html">Next</a>
+</button>
+      
+   
+    <footer>
+            <hr>
+            <!-- <marquee behavior="alternate" direction="up"> -->
+            <p>Made with love💖 by <i><a href="https://x.com/realPrinceAnand" target="_blank">Prince Anand</a></i>. &copy; 2025 <a href="https://youtube.com/@coderarmy9" target="_blank">Coder Army</a>. All rights reserved.</p></marquee>
+        <!-- </marquee> -->
+</body>
+</html>

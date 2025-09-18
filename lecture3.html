@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and List</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <h2><b>Coder Army</b>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./index.html">Home</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./notes.html">Notes</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./blogs.html">Blogs</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./aboutme.html">Contact Me</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <hr />
+      </nav>
+    </header>
+    <main>
+        <big>
+        <h2>Nested Lists in HTML</h2>
+        <button>
+    <a href="./lecture2.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture4.html">Next</a>
+</button>
+        <p>A nested list is a list that contains another list within it. In HTML, we can create nested lists using the <code>&lt;ul&gt;</code> (unordered list) or <code>&lt;ol&gt;</code> (ordered list) tags. 
+        </p>
+        <p>Each item in the list is represented by the <code>&lt;li&gt;</code> (list item) tag.
+        <!-- </p>  -->
+        <!-- <p> -->
+             To create a nested list, we simply place another <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> inside an <code>&lt;li&gt;</code> element.</p>
+        </p>
+        <h3>Example of Nested Lists:</h3>
+        
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Code1</th>
+                <th>Output1</th>
+                <th>
+                    Code2
+                </th>
+                <th>
+                    Output2</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>
+&lt;ul&gt;
+    &lt;li&gt;Fruits
+        &lt;ul&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Mango&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Vegetables
+        &lt;ul&gt;
+            &lt;li&gt;Carrot&lt;/li&gt;
+            &lt;li&gt;Broccoli&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Dairy
+        &lt;ul&gt;
+            &lt;li&gt;Milk&lt;/li&gt;
+            &lt;li&gt;Paneer&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                </td>
+                <td>
+                    <!-- <b>Output:</b> -->
+                    <ul>
+                        <li>Fruits
+                            <ul>
+                                <li>Apple</li>
+                                <li>Mango</li>
+                            </ul>
+                        </li>
+                        <li>Vegetables
+                            <ul>
+                                <li>Carrot</li>
+                                <li>Broccoli</li>
+                            </ul>
+                        </li>
+                        <li>Dairy
+                            <ul>
+                                <li>Milk</li>
+                                <li>Paneer</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+           
+        
+        <td>
+        <!-- <table border="1" cellpadding="10" cellspacing="0"> -->
+            <!-- <tr>
+                <td> -->
+                    <pre>
+&lt;h3&gt;Placement Stategy:&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;
+        Web Development
+        &lt;ul&gt;
+            &lt;li&gt;Frontend
+                &lt;ul&gt;
+                    &lt;li&gt;HTML&lt;/li&gt;
+                    &lt;li&gt;CSS&lt;/li&gt;
+                    &lt;li&gt;JavaScript&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Backend&lt;/li&gt;
+            &lt;li&gt;Full Stack&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        Programming Languages
+        &lt;ul&gt;
+            &lt;li&gt;Python&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+            &lt;li&gt;Java&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        DSA:
+        &lt;ul&gt;
+            &lt;li&gt;Array&lt;/li&gt;
+            &lt;li&gt;Linked List&lt;/li&gt;
+            &lt;li&gt;Stack&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                </td>
+                <td>
+                    <h3>Placement Stategy:</h3>
+                    <ol>
+                        <li>
+                            Web Development
+                            <ul>
+                                <li>Frontend
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                </li>
+                                <li>Backend</li>
+                                <li>Full Stack</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Programming Languages
+                            <ul>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>Java</li>
+                            </ul>
+                        </li>
+                        <li>
+                            DSA:
+                            <ul>
+                                <li>Array</li>
+                                <li>Linked List</li>
+                                <li>Stack</li>
+                        </li>
+                        </li>
+                    </ol>
+
+                </td>
+            </tr>
+        </table>
+        <p>
+            Explaination: 
+        </p>
+        <p>
+            In the first example, we have an unordered list of food categories (Fruits, Vegetables, Dairy), and each category contains its own unordered list of specific items. <br> In the second example, we have an ordered list for Placement Strategy with nested unordered lists for different domains and their respective technologies or topics.
+        </p>
+<hr>
+        <h2>HTML Tables</h2>
+        <p>Tables in HTML are used to display data in a tabular format, consisting of rows and columns. 
+            The main tags used to create tables are:
+            <ul>
+                <li><code>&lt;table&gt;</code>: This tag defines the table itself.</li>
+                <li><code>&lt;tr&gt;</code>: This tag defines a table row.</li>
+                <li><code>&lt;td&gt;</code>: This tag defines a table cell (data cell) within a row.</li>
+                <li><code>&lt;th&gt;</code>: This tag defines a table header cell, which is typically bold and centered.</li>
+                <li><code>&lt;thead&gt;</code>: This tag groups the header content in a table.</li></li>
+                <li><code>&lt;tbody&gt;</code>: This tag groups the body content in a table.</li>
+                <li><code>&lt;tfoot&gt;</code>: This tag groups the footer content in a table.</li>
+
+            </ul>
+        </p>
+        <h3>Example of a Simple Table:</h3>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>Rohit</td>
+                <td>Frontend Developer</td>
+            </tr>
+            <tr>
+                <td>Mohit</td>
+                <td>Backend Developer</td>
+            </tr>
+            <tr>
+                <td>Anjali</td>
+                <td>Full Stack Developer</td>
+            </tr>
+        </table>
+        <p>
+            In this example, we have a table with two columns: "Name" and "Role". The first row contains the headers, and the subsequent rows contain the data for each individual.
+        </p>
+        <p>
+            Tables can be further customized with attributes like:
+            <ul>
+                <li><code>border</code>: To add border to the cell and table.</li>
+                <li><code>cellpadding</code>: Specifies the space between the cell content and its border.</li>
+                <li><code>cellspacing</code>: To add space between individual table cells.</li>
+            </ul>
+        </p>
+        <p>
+            Tables are useful for organizing and presenting data in a clear and structured manner on web pages.
+        </p>
+        There are two main attributes used in the <code>&lt;td&gt;</code> & <code>&lt;th&gt;</code>tag to enhance the appearance of tables:
+        <ul>
+            <li><code>colspan</code>: Ek cell ko multiple columns mein spread karne ke liye. (e.g. <code>&lt;td colspan="3"&gt;</code>)</li>
+            <li><code>rowspan</code>: Ek cell ko multiple rows mein spread karne ke liye. (e.g. <code>&lt;td rowspan="2"&gt;</code>)</li>
+        </ul>
+        <h3>Example of Table with rowspan and colspan:</h3>
+        <table border="1">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Row 1 Cell 1</td>
+            <td> Row 1 cell 2</td>
+            <td> Row 1 Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2 Cell 2</td>
+            <td>Row 2 Cell 3</td>
+        </tr>
+        <tr>
+            <td colspan="3">Row 2 Cell 1</td>
+        </tr>
+    </tbody>
+</table>
+        </big>
+    </main>
+    
+    <hr>
+<button>
+    <a href="./lecture2.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture4.html">Next</a>
+</button>
+      
+    <footer>
+            <hr>
+            <!-- <marquee behavior="alternate" direction="up"> -->
+            <p>Made with love💖 by <i><a href="https://x.com/realPrinceAnand" target="_blank">Prince Anand</a></i>. &copy; 2025 <a href="https://youtube.com/@coderarmy9" target="_blank">Coder Army</a>. All rights reserved.</p></marquee>
+        <!-- </marquee> -->
+        </footer>
+  </body>
+</html>
+
+</body>
+</html>

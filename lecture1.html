@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Internet Works</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2><b>Coder Army</b>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./index.html">Home</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./notes.html">Notes</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./blogs.html">Blogs</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./aboutme.html">Contact Me</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        
+        <hr />
+      </nav>
+    </header>
+    <main>
+        <big>
+            <h1>How does Internet Work?</h1>
+            <button>
+        <a href="./index.html">Home</a>
+    </button>
+    <button>
+        <a href="./lecture2.html">Next</a>
+    </button>
+            <p>
+                Before Moving to How, Why do we need Internet?<br />
+                To transfer data from one computer to another, a direct electronic
+                connection is required. The Internet is the largest such network that
+                connects computers worldwide.
+                <br />Now, let's see how does one Computer know where to send the
+          data through IP Addresses.
+        </p>
+        <hr>
+        <h2>IP Address</h2>
+        <table>
+            <tr>
+                <td rowspan="2">
+                <!-- <p> -->
+                  Internet Protocol(IP) Address is just like address of a computer on a
+                  network to share data.
+                <br>
+                  Since, Computer understands only 0's and 1's, IP address is a
+                  collection of bits.
+                </p>
+                <p>There are two types of IP Address:</p>
+                <ul>
+                  <li>IPv4 - 32 bit address (represented in 4 decimal octets) 
+                    <br><img src="https://media.geeksforgeeks.org/wp-content/uploads/20241217170153436945/IPv4-address-format.webp" height="218.75px">
+                  </li>
+                  <li>IPv6 - 128 bit address (represented in 8 groups of hexadecimal)
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+                  </li>
+                </ul>
+                <th>Message passing through IP Address</th>
+            </td></tr>
+                <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./IPAddress1.png" alt="IPaddress" height="400px" />
+                </td></tr>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+        <p>
+          IPv6 is still not widely used. So, For Billions of devices all over
+          the internet, IPv4 32 bit is not sufficient. <br />Therefore, we use
+          Public and Private IP Address.
+        </p>
+        <ul>
+          <li>
+            Public IP Address - Unique across the whole internet. Assigned by
+            ISP(Internet Service Provider)
+            <br />For example, your home network has a public IP address assigned by your ISP like Airtel, Jio etc.
+            <br>
+            This can sometimes change if you restart your router. It is reassigned by ISP.
+          </li><br>
+          <li>
+            Private IP Address - Unique within a private/local network. Assigned by
+            Router <br />For example, in a home network, all devices connected
+            to the router have a private IP address assigned by the router.
+            <br />Private IP Address ranges(reserved):
+            <ul>
+              <li>10.0.0.0 to 10.255.255.255 (Used by large corporations)</li>
+              <li>172.16.0.0 to 172.31.255.255 (Used by medium-sized networks)
+              </li>
+              <li>192.168.0.0 to 192.168.255.255 (Most common for home networks)
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Two devices on the internet at different locations can have same
+          private address. But, they will have different public IP
+        </p>
+        <p>
+          Now, to make it easy for humans to remember IP Address, we use Domain
+          Names. <br>For example, instead of remembering digits like 142.250.72.206, we can remember
+          google.com.
+        </p>
+        </td>
+        <td>
+            <img src="./privateIP.png" alt="Private & Public IP" height="350px" />
+        </td>
+        </tr>
+        </table>
+        <hr>
+        <h2>Domain Name System(DNS)</h2>
+        <table>
+            <tr>
+                <td>
+                    <p>DNS is a hierarchical and distributed naming system that translates domain names into IP addresses. <br>
+                        Jab Hum kisi Website ka naam likhte hai toh DNS us naam ko IP address me convert karta hai jisse ki computer samajh sake.
+                        <br>For Example, jab aap apne browser me google.com likhte hai
+                        toh wo DNS server se contact karta hai jisse ki uska IP address mil sake.
+                        <br>DNS servers are like phone books for the internet. They maintain a directory of domain names and translate them to IP addresses.
+                    </p>
+                    <h3>How DNS Works? E.g, If we type google.com</h3>
+                    <ol>
+                        <li>
+                            Local Check (Ghar ki Talashi) - Browser pehle apne cache me check karta hai ki kya uske paas google.com ka IP address already stored hai. Agar hai toh wo directly us IP address pe chala jata hai.
+                        </li><br>
+                        <li>
+                            Recursive DNS Resolver (Padosi se poochna) - Agar browser ke paas IP address nahi hai toh wo apne configured recursive DNS server se poochta hai. Ye server usually aapke ISP(Internet Service Provider) ke dwara provide kiya jata hai.
+                        </li><br>
+                        <li>
+                            Asli Khoj (The Real Search) - Agar DNS Resolver ke cache memory me use haal hi me google.com ka koi search nhi hua hai toh wo asli khoj shuru karta hai. Ye process me 4 types ke DNS servers involved hote hai:
+                            <ul><br>
+                                <li>Root DNS Servers - Ye servers internet ke top level pe hote hai. Ye top-level domain(TLD) servers ke baare me jankari rakhte hai. Jaise ki .com, .org, .net etc.
+                                    <i><br>E.g., Yha Resolver puchta hai <q>bhai, .com domain ki jaankari kahan milegi?</q></i>
+                                </li><br>
+                                <li>TLD DNS Servers - Ye servers specific top-level domains ke liye responsible hote hai. Jaise ki .com TLD server google.com ke authoritative DNS server ke baare me jankari rakhte hai.
+                                <i><br>E.g., Yha Resolver puchta hai <q>bhai, google.com domain ki jaankari kahan milegi?</q></i>
+                                </li><br>
+                                <li>Authoritative DNS Servers - Ye servers specific domain names ke liye IP addresses rakhte hai. Jaise ki google.com ka authoritative DNS server uska actual IP address rakhte hai.
+                                <i><br>E.g., Yha Resolver puchta hai <q>Finally bata bhai, google.com ka IP Address aakhir hai kya?</q></i>
+                                </li><br>
+                            </ul>
+                        </li>
+                        <li>
+                            The Response - Authoritative server se IP address milne ke baad, DNS Resolver us jawab (142.250.196.110) ko aapke computer ko bhej deta hai. Saath hi, woh is jawab ko apni cache mein save kar leta hai taaki agli baar itni lambi khoj na karni pade.
+                        </li><br>
+                        <li>
+                            Connection Established - Ab aapka browser is IP address (142.250.196.110) ka use karke google ke server se connect ho jata hai aur website load ho jati hai.
+                        </li>
+                </td>
+                <td>
+                    <img src="https://www.cloudns.net/blog/wp-content/uploads/2020/12/How-does-DNS-work.png" height="800px" alt="DNS">
+
+                </td>
+            </tr>
+        </table>
+<hr>
+<h2>Mac Address</h2>
+<img src="./MAC.png" alt="macAddress" height="400px">
+<p>
+    MAC (Media Access Control) Address is a unique identifier assigned to a network interface controller (NIC) for use as a network address in communications within a network segment. <br>
+    It is a 48-bit address, usually represented in hexadecimal format, e.g., 00:1A:2B:3C:4D:5E.
+    <br>MAC Address is used for communication within a local network segment. It is used by switches to forward data packets to the correct device on the network.
+    <br>Since IP Address can change sometimes, MAC Address is used to uniquely identify a device on a network.
+    <br>Suppose Agr hum message bhejte hai aur usi time hamara IP address change ho jata hai toh hmara message kisi galat device pe chala jayega. <br> Isliye, MAC address ka use kiya jata hai to ensure that the message reaches the correct device.
+</p>
+<hr>
+<h2>
+    Port Number
+</h2>
+<table>
+    <tr>
+        <td>
+            <p><i> Ab Agar ek hi device pe multiple applications run kar rahe hai, toh kaise pata chalega ki kaunsa data kis application ke liye hai?</i> <br>
+                Port Number is a numerical identifier in networking used to specify a particular process or service on a device. <br>
+                It is a 16-bit number, ranging from 0 to 65535.
+                <br>For example, when you access a website, your browser connects to the web server using IP address and port number 80 (HTTP) or 443 (HTTPS).
+                <br>Common Port Numbers:
+                <ul>
+                    <li>HTTP - 80</li>
+                    <li>HTTPS (secured websites) - 443</li>
+                    <li>FTP - 21</li>
+                    <li>SSH - 22</li>
+                    <li>DNS - 53</li>
+                </ul>
+            </p>
+        </td>
+        <td>
+            <img src="./port.png" alt="Port Number" width="450px" />
+        </td>
+    </tr>
+</table>
+<hr>
+<h2>
+    LAN, Switch and Router
+</h2>
+<img src="./lan.png" alt="LAN, Switch and Router" height="400px" />
+<img src="./modernR.png" alt="Switch" height="200px" />
+<ul>
+    <li>
+        LAN (Local Area Network) - A LAN is a network that connects devices within a limited area, such as a home, office, or building. <br> It allows devices to communicate and share resources like files, printers, and internet connections.
+    </li>
+    <li>
+        Switch - Switch ek device hai jo multiple computers/devices ko connect karke unke beech data forward karta hai MAC address ke base par.
+    </li>
+    <li>
+        Router - Router ek device hai jo multiple networks ko connect karta hai aur data packets ko unke destination IP address ke base par forward karta hai.
+    </li>
+</ul>
+<hr>
+<h2>
+    What is Web Development? - Client-Server Model
+</h2>
+<img src="./clientsever.png" alt="Client-Server" width="400px">
+<p>
+    Internet pe hum jo bhi website visit karte hai wo Client-Server Model pe kaam karta hai. <br>
+    To make these websites is the role of a Web Developer.
+    Client-Server Model ek architecture hai jisme client aur server ke beech communication hota hai. <br>
+    Client wo device hai jo request bhejta hai aur server wo device hai jo request ko
+    We write code to create these websites using HTML, CSS, JavaScript for frontend and various backend technologies like Node.js, Python, PHP etc.
+</p>
+<h3>Mern Stack</h3>
+<img src="./mern.png" alt="mern" height="300px">
+<p>
+    Mern Stack is a popular web development stack that consists of four main technologies: MongoDB, Express.js, React.js, and Node.js. <br>
+    <ul>
+        <li>
+            MongoDB is used as the database
+        </li>
+        <li>
+            Express.js is used as the backend framework
+        </li>
+        <li>
+            React.js is used as the frontend framework
+        </li>
+        <li>
+            Node.js is used as the runtime environment
+        </li>
+    </ul>
+</p>
+<hr>
+<button>
+    <a href="./index.html">Home</a>
+</button>
+<button>
+    <a href="./lecture2.html">Next</a>
+</button>
+      </big>
+    </main>
+    <footer>
+            <hr>
+            <!-- <marquee behavior="alternate" direction="up"> -->
+            <p>Made with love💖 by <i><a href="https://x.com/realPrinceAnand" target="_blank">Prince Anand</a></i>. &copy; 2025 <a href="https://youtube.com/@coderarmy9" target="_blank">Coder Army</a>. All rights reserved.</p></marquee>
+        <!-- </marquee> -->
+        </footer>
+  </body>
+</html>

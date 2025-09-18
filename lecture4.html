@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Path in HTML & HTML BoilerPlate Code, DIV + Class + ID</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <h2><b>Coder Army</b>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./index.html">Home</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./notes.html">Notes</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./blogs.html">Blogs</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./aboutme.html">Contact Me</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <hr />
+      </nav>
+    </header>
+    <main>
+        <big>
+        <h2>
+            File Path in HTML
+        </h2>
+            <button>
+    <a href="./lecture3.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture5.html">Next</a>
+</button>
+        <p>
+            File path is used to link one file to another file. There are two types of file paths:
+            <ul>
+                <li><b>Absolute Path:</b> It is the complete path from the root directory to the target file.It starts with a drive letter (e.g., C:\) on Windows or a forward slash (/) on Unix-based systems.
+                    <br>Mtlb, agr hame apne pc me present kisi file ko browser ko btana h toh hme uska full path (e.g. <code>C:\Users\Prince\Desktop\Web Development - Defense\project\blogs.html</code>) dena hoga
+                        <br>
+                    Ye hum locally apne pc pr kr skte h but this is not allowed in browser when the website is hosted </p>
+                </li>
+                <li><b>Relative Path:</b> It is the path relative to the current file's location. It does not start with a drive letter or a forward slash. Instead, it uses dots (.) and slashes (/) to navigate through directories.
+                <ul>
+                    <li><code>./</code> - Current Directory</li>
+                    <li><code>../</code> - Parent Directory (One level up)</li>
+                    <li><code>../../</code> - Two levels up</li>
+                    <li>And so on...</li>
+                </ul>
+                    </li>
+            </ul>
+            <img src="./filepath.png" alt="file path image" width="600px">
+            <h3>
+                Problem with Absolute Path:
+            </h3>
+            <ul>
+            <li>
+            <p>
+                Agar hum apne website me absolute path use krte h toh jab hum apne website ko kisi server pr host krenge toh wo file us server pr exist nhi kregi. Isliye hamesha relative path use krna chahiye.
+            </p>
+            </li>
+            <li>
+            <p>
+                Browsers have security restrictions that prevent web pages from accessing local files on a user's computer. This is to protect user privacy and security. <br>
+                Agar ye rule na ho toh koi bhi malicious website hamare pc ki files ko access kr skti h without our permission.
+            </p>
+            </li>
+            </ul>
+            <p> Therefore,
+                <b>Always use Relative Path in your HTML files
+                    .</b>
+            
+                Absolute should be avoided except for linking to external resources like CDNs (Content Delivery Networks) or external websites.
+            </p>
+            <hr>
+            <h2>
+                HTML BoilerPlate Code
+            </h2>
+            <p>
+                This is the code that we write every time we create a new HTML file. It is the basic structure of an HTML document.
+
+                <br>
+                It includes:
+                <ul>
+                    <li>
+                        <code>&lt;!DOCTYPE html&gt;</code>: This declaration defines the document type and version of HTML being used. It helps browsers to render the page correctly.
+                    </li>
+                    <br>
+                    <li>
+                        <code>&lt;html lang="en"&gt;</code>: This is the root element of the HTML document. The <code>lang</code> attribute specifies the language of the document, which is important for accessibility and SEO.
+                    </li>
+                    <br>
+                    <li>
+                        <code>&lt;head&gt;</code>: This section contains meta-information about the document, such as the character set, viewport settings, title, and links to external resources like CSS files or JavaScript files.
+                        <br>
+                    </li>
+                    <br>
+                    <li>
+                        <code>&lt;meta charset="UTF-8"&gt;</code>: This meta tag specifies the character encoding for the document, ensuring that it can display a wide range of characters correctly. <br>
+                        For example, characters from different languages, special symbols, and emojis. like ASCII (English characters) only support a limited set of characters, while UTF-8 can represent virtually all characters used in modern computing even emojis like 💖, 🤣, etc;
+                    </li>
+                    <br>
+                    <li>
+                        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: This meta tag is crucial for responsive web design. It sets the viewport to match the device's width and initial zoom level, ensuring that the page looks good on all devices, including mobile phones and tablets.
+                    </li>
+                    <br>
+                    <li>
+                        <code>&lt;title&gt;Document&lt;/title&gt;</code>: This tag sets the title of the webpage, which is displayed in the browser tab and used by search engines.
+                    </li>
+                    <br>
+                    <li>
+                        <code>&lt;body&gt;</code>: This section contains the main content of the webpage that is visible to users, including text, images, links, and other elements.
+                    </li>
+                </ul>
+                <b>
+                    VS Code has a built-in feature to generate boilerplate code. Just type <code>!</code> and press <code>Tab/Enter</code> key.
+                </b>
+<hr>
+                <h2>
+                    DIV, Class, and ID in HTML
+                </h2>
+                Everything in HTML is an element. All HTML elements can be classified into two categories:
+                <ul>
+                    <li>Block-level elements - Takes Full Width of page</li>
+                    <li>Inline elements - Takes Width according to content present.</li>
+                </ul>
+                All Elements are percieved as boxes by the browser. <br>
+                <p>One such box is <b>div</b>(division) tag.</p>
+                <p>
+                    <b>DIV:</b> The <code>&lt;div&gt;</code> tag is a block-level container used to group together HTML elements. It is commonly used for layout purposes and to apply styles to a section of a webpage. <br>
+                </p>
+                <p>
+                    Website me bhot sare elements ek jaise ho skte h (jese ki multiple paragraphs, multiple images, etc), even Multiple div tags bhi ho skte h. <br>
+                    Toh agar hme un sabhi elements ko ek saath style krna h toh hme un sabhi elements ko alag alag style krna pdega. <br>
+                    <p>
+                        Is problem ko solve krne ke liye hum <b>Class</b> and <b>ID</b> ka use krte h.
+                    </p>
+
+                </p>
+                <ul>
+                    <li>
+                        <b>Class:</b> The class attribute is used to assign a class name to an HTML element. Multiple elements can share the same class name, allowing you to apply the same styles to all of them. <br>
+                        Class names should be descriptive and meaningful, and they should not contain spaces. If you want to use multiple classes for an element, you can separate them with spaces.
+                        <br>
+                        Example: <code>&lt;div class="container highlight"&gt;</code>
+                    </li>
+                    <br>
+                    <li>
+                        <b>ID:</b> The id attribute is used to assign a unique identifier to an HTML element. Each id must be unique within a document, meaning that no two elements can have the same id. IDs are often used for targeting specific elements with CSS or JavaScript.
+                        <br>
+                        Example: <code>&lt;div id="header"&gt;</code>
+                    </li>
+                    <img src="./classId.png" alt="classID Analogy" width="800px">
+        </big>
+
+    </main>
+    <hr>
+    <button>
+    <a href="./lecture3.html">Previous</a>
+</button>
+<button>
+    <a href="./lecture5.html">Next</a>
+</button>
+      
+    <footer>
+            <hr>
+            <!-- <marquee behavior="alternate" direction="up"> -->
+            <p>Made with love💖 by <i><a href="https://x.com/realPrinceAnand" target="_blank">Prince Anand</a></i>. &copy; 2025 <a href="https://youtube.com/@coderarmy9" target="_blank">Coder Army</a>. All rights reserved.</p></marquee>
+        <!-- </marquee> -->
+        </footer>
+</body>
+</html>
